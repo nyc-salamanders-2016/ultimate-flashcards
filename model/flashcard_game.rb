@@ -1,14 +1,16 @@
 require_relative '../model/parser'
-class Game
 
+class Game
   include Parser
+
+  attr_reader :deck
 
   def initialize
     @deck = []
   end
 
   def read(file)
-    @deck = Parser.read_text(file)
-    p @deck
+    @deck = Parser.read(file)
   end
+
 end
