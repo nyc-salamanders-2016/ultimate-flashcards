@@ -12,9 +12,9 @@ module Parser
       list << Card.new(question: questions[index], answer: answers[index])
       # list << [questions[index],answers[index]]
     end
-
     file.close
   end
+
 end
 
 Parser.read('nighthawk_flashcard_data.txt')
