@@ -1,5 +1,5 @@
 require_relative '../model/flash_card'
-require_relative '../model/flash_deck'
+require_relative '../model/flashcard_game'
 require_relative '../model/parser'
 
 class FlashRunner
@@ -7,8 +7,8 @@ class FlashRunner
 
   def initialize
     @game = Game.new
-    #@view = View.new
-     @file = ARGV[0]
+    @view = View.new
+    @file = ARGV[0]
     run
   end
 
