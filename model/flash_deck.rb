@@ -1,7 +1,7 @@
-# require_relative '../model/parser'
+#require_relative '../model/parser'
 class Game
 
-  include Parser
+  #include Parser
 
   def initialize
     @deck = []
@@ -9,7 +9,7 @@ class Game
 
   def read(file)
     @deck = Parser.read_text(file)
-    puts @deck
+    p @deck
   end
 
 end

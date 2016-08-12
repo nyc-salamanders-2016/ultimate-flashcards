@@ -17,5 +17,3 @@ module Parser
   end
 end
 
-Parser.read('nighthawk_flashcard_data.txt')
-
