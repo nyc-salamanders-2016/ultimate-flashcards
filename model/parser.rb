@@ -1,4 +1,3 @@
-
 module Parser
 
   def self.read(file)
