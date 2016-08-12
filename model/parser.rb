@@ -1,6 +1,7 @@
+
 module Parser
 
-  def self.read_text(file)
+  def self.read(file)
     file = File.open(file,"r")
     list = []
     file.each_line {|item| list << item.chomp }

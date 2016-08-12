@@ -8,13 +8,14 @@ class FlashRunner
 
   def initialize
     @game = Game.new
-    @view = View.new
+    #@view = View.new
     @file = ARGV[0]
     run
   end
 
   def run
     if ARGV.any?
+      #binding.pry
         @game.read(@file)
     end
   end

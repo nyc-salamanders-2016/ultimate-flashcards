@@ -7,7 +7,8 @@ class Game
   end
 
   def read(file)
-    @deck = Parser.read_text(file)
+    @deck = Parser.read(file)
+    p @deck
   end
 
 end
