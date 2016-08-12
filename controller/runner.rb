@@ -16,20 +16,36 @@ class FlashRunner
   end
 
   def run
-    i= 0
-    @deck.each do |card|
-      puts card.question
-      input = @view.user_input
-      if input == card.answer
+    until @deck.finished?
+      binding.pry
+      card = @deck.next_card
+      @view.print_card(card)
+      guess = @view.user_input
+      if card.guess_correct?(guess)
         @view.print_correct
-        i += 1
-        else
-          @view.print_wrong
+      else
+        @view.print_wrong
       end
-      puts
     end
-   @view.correct_count(@deck, i)
+    @view.print_stats(@deck.number_correct,@deck)
   end
+
+
+
+   #  i = 0
+   #  @deck.each do |card|
+   #    puts card.question
+   #    input = @view.user_input
+   #    if input == card.answer
+   #      @view.print_correct
+   #      i += 1
+   #      else
+   #        @view.print_wrong
+   #    end
+   #    puts
+   #  end
+   # @view.correct_count(@deck, i)
+  # end
 end
 
 FlashRunner.new
