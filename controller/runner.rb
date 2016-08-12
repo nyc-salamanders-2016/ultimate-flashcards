@@ -1,7 +1,6 @@
 require_relative '../model/flash_card'
 require_relative '../model/flash_deck'
 require_relative '../model/parser'
-require 'pry'
 
 class FlashRunner
   attr_reader :card, :game
@@ -17,10 +16,8 @@ class FlashRunner
     if ARGV.any?
         @game.read(@file)
     end
-
-  # End run below
   end
-
 end
 
 FlashRunner.new
+
