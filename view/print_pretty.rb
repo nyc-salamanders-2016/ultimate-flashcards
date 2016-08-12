@@ -1,5 +1,3 @@
-require 'pry'
-
 class View
 
   def print_question(flash_deck)
