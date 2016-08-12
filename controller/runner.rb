@@ -1,6 +1,7 @@
 require_relative '../model/flash_card'
 require_relative '../model/flashcard_game'
 require_relative '../model/parser'
+require 'pry'
 
 class FlashRunner
   attr_reader :card, :game

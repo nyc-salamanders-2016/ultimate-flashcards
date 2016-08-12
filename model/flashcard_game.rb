@@ -1,4 +1,5 @@
-`class Game
+require_relative '../model/parser'
+class Game
   include Parser
 
   def initialize
